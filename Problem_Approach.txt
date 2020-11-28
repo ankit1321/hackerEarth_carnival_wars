@@ -1,0 +1,32 @@
+# Steps to predict the product price.
+
+1. Read the training dataset through pandas
+
+2. Checked if NA values present in dataset or not.
+
+3. Aggregated min_value and max_value column in single column by taking average.
+
+4. NA values present in columns containing data type int or float is rectified through taking mean.
+
+5. Dropped customer_name column from dataset as it contains null values.
+
+6. Converted all input features to numerical type by using OrdinalEncoder.
+
+7. Columns with limited labels like product_category and grade is then seperated from input features.
+
+8. Applied onehot encodeing to them and appended back to input features.
+
+9. Then for training and testing the model, I splitted the data in 9:1 ratio.
+
+10. By trial and testing created model with diiferent dense layers with mixture of 'relu' and 'tanh' as activation fuction to it.
+
+11. Used Adam optimiser with mean squared error as loss function and trained the model.
+
+12. Saved the model.
+
+13. For test.csv repeated the same step till model creation.
+
+14. loaded the saved model and get the predicted values.
+
+15. Stored in submission.csv file as per given format.
+ 
